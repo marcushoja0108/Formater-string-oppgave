@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formkonverterer</title>
+</head>
+<body>
+    <div>
+        <input onchange="formattext()" id="inputbox" type="text">
+    </div>
+
+<div id="textbox"></div>
+    
+
+
+<script>
+    let input = document.getElementById('inputbox')
+    
+    function formattext(){
+        document.getElementById('textbox').innerHTML = 
+        input.value;
+        uppercase()
+    }
+
+    function uppercase(){
+        let text = document.getElementById('textbox').innerHTML;
+
+        document.getElementById('textbox').innerHTML = 
+        text.charAt(0).toUpperCase();
+        
+        document.getElementById('textbox').innerHTML += 
+        text.substring(1);
+
+    }
+   
+</script>
+</body>
+</html>
